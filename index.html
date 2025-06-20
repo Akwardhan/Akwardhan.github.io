@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anmol Kirtiwardhan – Data & ML Analyst | SQL · Streamlit · Real‑Time Apps</title>
+  <meta name="description" content="Portfolio of Anmol Kirtiwardhan – Data & ML Analyst skilled in SQL, Python, Power BI, Streamlit and Machine Learning. Real‑time ML apps for business impact.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    /* — Your existing CSS unchanged — */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width:100%; height:100%; font-family:'Segoe UI',sans-serif; scroll-behavior:smooth; overflow-x:hidden; background:#f9f9fb; }
+    nav { backdrop-filter:blur(10px); background:#111827ee; color:white; position:fixed; top:0; left:0; right:0; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; box-shadow:0 2px 4px rgba(0,0,0,0.1); z-index:1000; }
+    nav a { padding:0.5rem 1rem; background:#407BFF; color:#fff; border-radius:6px; font-weight:600; text-decoration:none; margin-left:1rem; box-shadow:0 0 8px #407BFF; transition:transform 0.3s ease, box-shadow 0.3s ease; }
+    nav a:hover { transform:scale(1.05); box-shadow:0 0 10px #407BFF; }
+    .hero { position:relative; height:100vh; background:linear-gradient(135deg,#1e1e2f,#283048); color:#fdfdfd; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2rem; z-index:1; overflow:hidden; }
+    #particles-js { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
+    .hero h1,.hero p,.hero a{z-index:1; position:relative;}
+    .hero h1{font-size:3rem;margin-bottom:1rem;}
+    .hero p{font-size:1.2rem;margin-bottom:2rem;color:#ccc;min-height:1.5rem;}
+    .hero a{padding:0.75rem 1.5rem;background:#407BFF;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;box-shadow:0 0 10px #407BFF;animation:pulse 2s infinite;}
+    .hero a:hover{background:#305dcf;}
+    @keyframes pulse{0%,100%{box-shadow:0 0 10px #407BFF;}50%{box-shadow:0 0 20px #407BFF;}}
+    .slider { padding:4rem 2rem; }
+    .slider .project:nth-child(1){background:linear-gradient(to right,#7e2670,#658aaf);}
+    .slider .project:nth-child(2){background:linear-gradient(to right,#9e9c21,#956060);}
+    .slider .project:nth-child(3){background:linear-gradient(to right,#ac4425,#ebb6b6);}
+    .project { display:flex; flex-wrap:wrap; margin-bottom:4rem; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.05); overflow:hidden; opacity:0; transform:translateY(50px); transition:all 0.6s ease; }
+    .project.animate.visible{ opacity:1; transform:translateY(0); }
+    .project .text{ flex:1 1 400px; padding:2rem; color:#fff; }
+    .project .image{ flex:1 1 300px; display:flex; align-items:center; justify-content:center; padding:1rem; }
+    .project .image img{ max-width:100%; max-height:300px; object-fit:cover; border-radius:8px; }
+    .project-tech{ margin-top:1rem; display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .pill{ background:#e0eaff; color:#003366; padding:0.4rem 0.9rem; border-radius:999px; font-weight:600; font-size:0.85rem; }
+    .project-buttons{ margin-top:1.5rem; }
+    .project-buttons a{ display:inline-block; margin-right:1rem; padding:0.5rem 1rem; color:#fff; text-decoration:none; border-radius:6px; font-weight:600; transition:transform 0.3s ease, box-shadow 0.3s ease; }
+    .project-buttons a:hover{ transform:scale(1.1); box-shadow:0 0 14px rgba(255,255,255,0.9); }
+    .live-demo-btn{ background:linear-gradient(45deg,#06beb6,#48b1bf); box-shadow:0 0 12px #48b1bf,0 0 24px #48b1bf; }
+    .github-btn{ background:linear-gradient(45deg,#654ea3,#eaafc8); box-shadow:0 0 12px #654ea3,0 0 24px #eaafc8; }
+    .about,.contact{ padding:4rem 2rem; width:100%; text-align:center; }
+    .about{ background:linear-gradient(to bottom,#de68be,#627b98); color:#fff; }
+    .contact{ background:linear-gradient(to bottom,#524aea,#b78639); color:#fff; }
+    .contact a{ display:inline-flex; align-items:center; padding:0.75rem 1.5rem; border-radius:8px; font-weight:600; text-decoration:none; box-shadow:0 0 8px #000; color:white; transition:transform 0.3s ease; }
+    .contact a:hover{ transform:scale(1.1); box-shadow:0 0 12px rgba(255,255,255,0.8); }
+    .floating-resume{ position:fixed; bottom:20px; right:20px; background:#e63946; color:white; padding:0.75rem 1.25rem; border-radius:50px; text-decoration:none; box-shadow:0 0 12px #e63946; font-weight:600; }
+    /* — Tab styles — */
+    .tabs{ display:flex; justify-content:center; gap:1rem; margin-bottom:2rem; }
+    .tab-button{ background:linear-gradient(to right,#0f0c29,#302b63,#24243e); color:#fff; padding:0.75rem 1.5rem; border:none; border-radius:999px; cursor:pointer; transition:all 0.3s ease; font-weight:bold; box-shadow:0 0 10px rgba(255,255,255,0.1); }
+    .tab-button:hover,.tab-button.active{ box-shadow:0 0 15px rgba(255,255,255,0.4); transform:scale(1.05); }
+    .tab-panel{ display:none; }
+    .tab-panel.active{ display:block; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div><strong>Anmol Kirtiwardhan</strong></div>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div id="particles-js"></div>
+    <h1>Data & ML Analyst</h1>
+    <p><span id="typed-text"></span></p>
+    <a href="#projects">Explore Projects ↓</a>
+  </section>
+
+  <!-- Projects Section with Tabs -->
+  <section id="projects" class="slider">
+    <div class="tabs">
+      <button class="tab-button active" data-tab="flagship">Flagship Projects</button>
+      <button class="tab-button" data-tab="mini">Mini Projects</button>
+    </div>
+
+    <div class="tab-panel active" id="flagship">
+      <!-- Your existing flagship projects -->
+      <div class="project">
+        <div class="text">
+          <h2>Loan Default Prediction – XGBoost</h2>
+          <p>Built a Streamlit app using XGBoost to predict loan defaults on 1.3M+ records. Achieved 67% recall, 0.43 F1 score. Key risk drivers: FICO <660, DTI >35%, 60-month terms, and loan >₹12L.
+
+</p>
+          <div class="project-tech">
+            <span class="pill">Python</span><span class="pill">XGBoost</span><span class="pill">Streamlit</span><span class="pill">Imbalanced Data</span><span class="pill">AUC</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://loan-default-prediction-xgboost-app-lgccyltgxl9suauhmcuhqp.streamlit.app/" class="live-demo-btn"><i class="fas fa-bolt"></i> Live Demo</a>
+            <a href="https://github.com/Akwardhan/Loan-Default-Prediction-XGBoost-Streamlit" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/Loan  Fraud Model.png" alt="Loan Default App"></div>
+      </div>
+
+      <div class="project">
+        <div class="text">
+          <h2>Telco Customer Churn – Logistic Regression</h2>
+          <p>Deployed Streamlit app using logistic regression (84% accuracy, 0.81 F1) to predict telecom churn. Found 55% churn in monthly plans, 3× risk without tech support, and 50%+ for tenure <6 months.</p>
+          <div class="project-tech">
+            <span class="pill">Python</span><span class="pill">Logistic Regression</span><span class="pill">Streamlit</span><span class="pill">Feature Engineering</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://telco-customer-churn-prediction-ml-app-yptkcbzrntq9szllbnvgcb.streamlit.app/" class="live-demo-btn"><i class="fas fa-bolt"></i> Live Demo</a>
+            <a href="https://github.com/Akwardhan/Telco-Customer-Churn-Prediction-ML-Streamlit" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/Live Model.png" alt="Telco Churn App"></div>
+      </div>
+
+      <div class="project">
+        <div class="text">
+          <h2>Enterprise Fraud Detection – SQL + PaySim</h2>
+          <p>Analyzed 6.3M+ PaySim transactions using SQL to detect fraud. Uncovered ₹12B+ in flagged flows, 0.13% fraud rate, and peak activity during 6–11 PM. Built queries to score high-risk users and transactions.</p>
+          <div class="project-tech">
+            <span class="pill">SQL</span><span class="pill">PostgreSQL</span><span class="pill">CTEs</span><span class="pill">Window Functions</span><span class="pill">PaySim</span>
+          </div>
+          <div class="project-buttons">
+            
+            <a href="https://github.com/Akwardhan/Enterprise-Fraud-Detection-PaySim-SQL" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/fraud 2.png" alt="Fraud Detection"></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="mini">
+      <!-- Six Mini Project Cards -->
+      <div class="project">
+        <div class="text">
+          <h2>SQL Data Cleaning Project</h2>
+          <p>Cleaned a global layoffs dataset using MySQL Workbench — handled NULLs, duplicates, and standardized formats for analytics readiness.</p>
+          <div class="project-tech">
+            <span class="pill">SQL</span><span class="pill">MySQL</span><span class="pill">ETL</span><span class="pill">Data Prep</span>
+          </div>
+          <div class="project-buttons">
+            
+            <a href="https://github.com/Akwardhan/SQL-Data-Cleaning-Layoffs" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/data cleaning in sql.jpg" alt="SQL Data Cleaning"></div>
+      </div>
+
+      <div class="project">
+        <div class="text">
+          <h2>SQL EDA – Layoffs Analysis</h2>
+          <p>Conducted exploratory data analysis on layoffs — derived trends, aggregations, and country-wise patterns using advanced SQL queries.</p>
+          <div class="project-tech">
+            <span class="pill">SQL</span><span class="pill">Analytics</span><span class="pill">Window Functions</span><span class="pill">Trends</span>
+          </div>
+          <div class="project-buttons">
+            
+            <a href="https://github.com/Akwardhan/SQL-EDA-Layoffs" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/EDA.png" alt="SQL EDA"></div>
+      </div>
+
+      <div class="project">
+        <div class="text">
+          <h2>Excel Sales Dashboard Analysis</h2>
+          <p>Interactive Excel dashboard with slicers, pivot tables and charts analyzing bike sales across regions, categories and timelines.</p>
+          <div class="project-tech">
+            <span class="pill">Excel</span><span class="pill">Dashboard</span><span class="pill">Pivot Tables</span><span class="pill">Slicers</span><span class="pill">Charts</span>
+          </div>
+          <div class="project-buttons">
+            
+            <a href="https://github.com/Akwardhan/Excel-Sales-Dashboard-Analysis" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/Excel2.png" alt="Excel Dashboard"></div>
+      </div>
+
+      <div class="project" style="background-color: #06beb6;">
+        <div class="text">
+          <h2>Power BI Survey Dashboard</h2>
+          <p>A Power BI dashboard visualizing global data professionals’ survey responses — showcasing salary, roles, tool usage and geography insights.</p>
+          <div class="project-tech">
+            <span class="pill">Power BI</span><span class="pill">Dashboard</span><span class="pill">Data Viz</span><span class="pill">Survey</span>
+          </div>
+          <div class="project-buttons">
+          
+            <a href="https://github.com/Akwardhan/PowerBI_Data_Professionals_Survey_Dashboard" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/Final_Dashboard.png" alt="Power BI Dashboard"></div>
+      </div>
+
+      <div class="project" style="background-color: coral;">
+        <div class="text">
+          <h2>Web Scraping – Fortune Companies</h2>
+          <p>Python + BeautifulSoup scraper to collect and clean revenue data of top U.S. firms from Wikipedia for competitive analysis.</p>
+          <div class="project-tech">
+            <span class="pill">Python</span><span class="pill">BeautifulSoup</span><span class="pill">Web Scraping</span><span class="pill">Data Collection</span>
+          </div>
+          <div class="project-buttons">
+            
+            <a href="https://github.com/Akwardhan/Web-Scraping-US-Fortune-Companies" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/web scraping3.png.jpg" alt="Web Scraping"></div>
+      </div>
+
+      <div class="project" style="background-color: #1e1e2f;">
+        <div class="text">
+          <h2>Tableau – Customer Reviews Analysis</h2>
+          <p>Analyzed customer reviews using Tableau — visualizing sentiment trends, word clouds and key themes across feedback data.</p>
+          <div class="project-tech">
+            <span class="pill">Tableau</span><span class="pill">Visualization</span><span class="pill">Sentiment</span><span class="pill">Analytics</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://public.tableau.com/app/profile/anmol.kirtiwardhan/viz/BritishAirwaysReview_17465224460520/Dashboard1" target="_blank" class="live-demo-btn">
+  <i class="fab fa-tableau"></i> Tableau Public
+</a>
+
+</a>
+
+            <a href="https://github.com/Akwardhan/Tableau-British-Airways-Review" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="image"><img src="images/Tableau dashboard.png" alt="Tableau Reviews"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about fade-section">
+    <h2><i class="fas fa-user"></i> About Me</h2>
+    <p>I'm a final‑year B.Tech student passionate about solving real‑world problems through data. With hands‑on experience in SQL, Python, and Streamlit, I specialize in building end‑to‑end analytics and machine learning apps that deliver real business value. Not just a fresher — but a deployment‑ready analyst, with live projects and production‑grade skills.</p>
+    <p style="margin-top:1rem;font-style:italic;color:#eee;">"Turning raw data into strategic decisions."</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2><i class="fas fa-handshake"></i> Let's Connect</h2>
+    <div style="margin-top:2rem; display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;">
+      <a href="mailto:anmolkirtiwardhan@gmail.com" target="_blank" style="background:#dd6b61"><i class="fas fa-envelope" style="margin-right:8px;"></i> Gmail</a>
+      <a href="https://www.linkedin.com/in/akwardhan/" target="_blank" style="background:#0a66c2"><i class="fab fa-linkedin" style="margin-right:8px;"></i> LinkedIn</a>
+      <a href="https://github.com/Akwardhan" target="_blank" style="background:#8a2a75"><i class="fab fa-github" style="margin-right:8px;"></i> GitHub</a>
+    </div>
+  </section>
+
+  <a href="assets/Anmol_Kirtiwardhan_Resume.pdf" target="_blank" class="floating-resume"><i class="fas fa-file-pdf"></i> Resume</a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      new Typed("#typed-text", {
+        strings: [
+          "SQL · Python · Power BI · Streamlit",
+          "Real‑Time ML Dashboards",
+          "Predictive Models for Business Use",
+          "Analytics on 1M+ Rows of Data",
+          "Data‑Driven Decision Tools"
+        ],
+        typeSpeed:50, backSpeed:30, backDelay:1500, loop:true
+      });
+      particlesJS("particles-js", {
+        particles:{
+          number:{value:80,density:{enable:true,value_area:800}},
+          color:{value:"#ffffff"}, shape:{type:"circle"},
+          opacity:{value:0.5}, size:{value:3},
+          line_linked:{enable:true,distance:150,color:"#ffffff",opacity:0.4,width:1},
+          move:{enable:true,speed:2,direction:"none",out_mode:"out"}
+        },
+        interactivity:{
+          detect_on:"canvas",
+          events:{onhover:{enable:true,mode:"repulse"},onclick:{enable:true,mode:"push"}},
+          modes:{repulse:{distance:100},push:{particles_nb:4}}
+        },
+        retina_detect:true
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){ entry.target.classList.add("animate","visible"); }
+          else{ entry.target.classList.remove("visible"); }
+        });
+      }, { threshold:0.1 });
+
+      document.querySelectorAll(".project, .fade-section").forEach(el => observer.observe(el));
+
+      document.querySelectorAll(".tab-button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
+          document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.tab).classList.add("active");
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
