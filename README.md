@@ -18,7 +18,7 @@ This portfolio includes a collection of business-facing projects that reflect my
 ## 🔗 Resume, LinkedIn & GitHub
 
 
-<a href="assets/Anmol_Kirtiwardhan_Resume.pdf">
+<a href="assets/Anmol Kirtiwardhan_Resume.pdf">
   <img src="https://img.shields.io/badge/Resume-red?style=flat&logo=adobeacrobatreader&logoColor=white" alt="Resume">
 </a>
 <br><br>
